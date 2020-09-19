@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { SampleAction, SampleActionRunning } from '../actions/SampleAction'
+import Label from '../components/Label/Label'
+import LocateButton from '../components/LocateButton/LocateButton'
 import SampleView from '../components/SampleView/SampleView'
 
 class StartScreen extends React.Component {
@@ -10,7 +12,9 @@ class StartScreen extends React.Component {
     this.state = {
       message: 'Welcome to the app!',
       dispatchMessage: 'Dispatch an action to:',
-      label: 'Action:'
+      label: 'Action:',
+      ip: 'Hello',
+      location: 'Hello'
     }
 
     this.dispatchActionsRunning(true)
@@ -32,10 +36,18 @@ class StartScreen extends React.Component {
   dispatchActionsRunning(action) {
     this.props.dispatch(SampleActionRunning(action))
   }
+  _handlePress(event) {
+    event.preventDefault();
+    console.log('Clicked!');
+  }
 
   render() {
     return (
-      <SampleView {...this.state} responseAction={this.props.actions.message} />
+      <div>
+        <LocateButton accessibilityLabel='Locate Button' onClick={this._handlePress} title='Click me!' />
+        <Label label={'IP Address'} text={this.state.ip}/>
+        <Label label={'Location'} text={this.state.location}/>
+      </div>
     )
   }
 }

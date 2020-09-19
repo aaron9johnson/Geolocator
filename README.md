@@ -3,40 +3,54 @@ Find you location and IP address using your phone!!
 
 ## Environment Setup
 
-brew install node // make sure it is Node 10 or newer.
-brew install watchman
-
-install Xcode is via the Mac App Store (This includes simulator)
-install the Xcode Command Line Tools
-
-sudo gem install cocoapods
+- ```brew install node ``` - make sure it is Node 10 or newer.
+- ```brew install watchman```
+- install Xcode is via the Mac App Store (This includes the simulator)
+- install the Xcode Command Line Tools
+- ```sudo gem install cocoapods```
 
 ## Project Setup
 
-npx react-native init Geolocator --template react-native-template-typescript
+```git clone git@github.com:ReyHaynes/react-redux-web-native.git Geolocator```
 
-## issues encountered:
+## Issues Encountered:
 
 Build failed:
 1) Open Xcode.
 2) File > Project Settings > Build System > switch dropdown to Legacy Build System.
 
-missing config.h file:
+Missing config.h file:
 1) Close your Xcode.
 2) Open Terminal, go to your project's root folder and do:
-cd node_modules/react-native/third-party/glog-{X}.{X}.{X}/
+```cd node_modules/react-native/third-party/glog-{X}.{X}.{X}/```
 3) Run the configure script:
-./configure
+```./configure```
+
+Missing main.jsbundle:
+1) Open XCode
+2) Project in the Navigator -> apps target -> Build Phases -> Copy Bundle Resources -> add main.jsbundle
+
+iOS "Could not find iPhone 6 simulator":
+1) go to: node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js
+2) replace: ```if (version.indexOf('iOS') !== 0 )``` with ```if (!version.includes("iOS" ))```
+3) replace: ```if (simulator.availability !== '(available)')``` with ```if (simulator.isAvailable !== true)```
 
 ## Running Application
 
-To start Metro(JavaScript bundler): npx react-native start
+To start Metro(JavaScript bundler): ```npx react-native start```
 
-Start: npx react-native run-ios
+Start: ```npx react-native run-ios```
 
+### Web
 
+```yarn web:start```
 
+### iOS
+Bundle iOs: ```react-native bundle --dev false --entry-file index.js --bundle-output ios/main.jsbundle --platform ios```
 
+Run iOS: ```yarn ios:start```
+or
+Open Geolocator.xcodeproj in Xcode and run.
 
 # Starting Point (https://github.com/ReyHaynes/react-redux-web-native)
 
