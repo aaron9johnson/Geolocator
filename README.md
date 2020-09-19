@@ -15,6 +15,19 @@ sudo gem install cocoapods
 
 npx react-native init Geolocator --template react-native-template-typescript
 
+## issues encountered:
+
+Build failed:
+1) Open Xcode.
+2) File > Project Settings > Build System > switch dropdown to Legacy Build System.
+
+missing config.h file:
+1) Close your Xcode.
+2) Open Terminal, go to your project's root folder and do:
+cd node_modules/react-native/third-party/glog-{X}.{X}.{X}/
+3) Run the configure script:
+./configure
+
 ## Running Application
 
 To start Metro(JavaScript bundler): npx react-native start
