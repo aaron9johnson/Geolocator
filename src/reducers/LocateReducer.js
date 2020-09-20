@@ -1,21 +1,21 @@
 import {
-  SOMETHING_SUCCESSFUL,
-  SOMETHING_FAILED,
-  SOMETHING_RUNNING,
-  SOMETHING_COMPLETE
+  LOCATE_SUCCESSFUL,
+  LOCATE_FAILED,
+  LOCATE_RUNNING,
+  LOCATE_COMPLETE
 } from '../actions'
 
 const initialState = {
-  message: 'Waiting for Action...',
-  runningInit: false
+  ip: '',
+  location: ''
 }
 
 export default function logReducer(state = initialState, action) {
     switch (action.type) {
-        case SOMETHING_SUCCESSFUL:
-        case SOMETHING_FAILED:
-        case SOMETHING_RUNNING:
-        case SOMETHING_COMPLETE:
+        case LOCATE_SUCCESSFUL:
+        case LOCATE_FAILED:
+        case LOCATE_RUNNING:
+        case LOCATE_COMPLETE:
             return {
                 ...state,...action.data
             };
