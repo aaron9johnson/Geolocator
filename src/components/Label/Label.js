@@ -7,10 +7,6 @@ import PropTypes from 'prop-types';
 export default class Label extends React.Component {
   static propTypes = {
     /**
-     * Text to display for blindness accessibility features
-     */
-    accessibilityLabel: PropTypes.string,
-    /**
      * Color of the text (iOS), or background color of the button (Android)
      */
     color: PropTypes.string,
@@ -29,7 +25,6 @@ export default class Label extends React.Component {
   };
   render() {
     const {
-      accessibilityLabel,
       color,
       disabled,
       text,
@@ -49,13 +44,12 @@ export default class Label extends React.Component {
 
     return (
       <div>
-        <p style={labelStyles}>{label}:<t style={textStyles}>{text}</t></p>
+        <p style={labelStyles}>{label}:<span style={textStyles}>{text}</span></p>
       </div>
       
     );
   }
 }
-// Material design blue from https://material.google.com/style/color.html#color-color-palette
 const styles = {
   text: {
     textAlign: 'center',

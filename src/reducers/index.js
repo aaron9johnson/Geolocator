@@ -1,5 +1,5 @@
-import SampleReducer from "./SampleReducer"
+import LocateReducer from "./LocateReducer"
 
 export default {
-  sample: SampleReducer
+  locate: LocateReducer
 }
