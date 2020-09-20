@@ -7,7 +7,8 @@ import {
 
 const initialState = {
   ip: '',
-  location: ''
+  location: '',
+  flag: ''
 }
 
 export default function logReducer(state = initialState, action) {

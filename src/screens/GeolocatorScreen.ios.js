@@ -1,9 +1,9 @@
-import { findLastIndex } from 'lodash'
 import React from 'react'
 import { connect } from 'react-redux'
 import { LocateAction } from '../actions/LocateAction'
 import Label from '../components/Label/Label'
 import LocateButton from '../components/LocateButton/LocateButton'
+import { View, Text, Image, StyleSheet} from 'react-native'
 
 class GeolocatorScreen extends React.Component {
   constructor(props, context) {
@@ -32,22 +32,22 @@ class GeolocatorScreen extends React.Component {
 
   renderFlag(){
     if(this.state.flag != ''){
-      return (<img style={styles.flag} src={this.state.flag}/>);
+      return (<Image uri={this.state.flag}/>);
     }
   }
 
   render() {
     return (
-      <div style={styles.main}>
-        <div style={styles.box}>
-          <h1 style={styles.title}>GeoLocator</h1>
+      <View style={styles.main}>
+        <View>
+          <Text style={styles.title}>GeoLocator</Text>
           <Label label={'IP Address'} text={this.state.ip}/>
           <Label label={'Location'} text={this.state.location}/>
           <LocateButton onClick={this.dispatchLocateAction} title='Find my Location' />
           {this.renderFlag()}
-        </div>
-        <p style={styles.developer}>Aaron Johnson</p>
-      </div>
+        </View>
+        <Text>Aaron Johnson</Text>
+      </View>
     )
   }
 }
@@ -72,17 +72,9 @@ const styles = {
     flexDirection: 'column'
   },
   title: {
-    textAlign: 'center'
-  },
-  developer: {
-    color: 'lightGrey'
-  },
-  flag: {
-    position: 'absolute',
-    top: '25px',
-    right: '25px',
-    width: '64px',
-    height: '32px'
+    fontSize: 40
   }
 }
+
+
 export default connect(mapStateToProps)(GeolocatorScreen);

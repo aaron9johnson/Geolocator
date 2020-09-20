@@ -42,7 +42,7 @@ const styles = {
   text: {
     textAlign: 'center',
     color: 'white',
-    padding: 8,
-    fontWeight: '500'
+    fontWeight: '500',
+    fontSize: '20px'
   }
 };
