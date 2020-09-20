@@ -1,16 +1,14 @@
 # Geolocator
-Find you location and IP address using your phone!!
+Find you location and IP address using the web or your phone!!
 
 ## Screenshots
-Web:
-![Alt text](https://drive.google.com/uc?export=view&id=12LDJ5ZEpscxDFDG1XblXcLDG8BbzcyZ3 "Web Start")
-![Alt text](https://drive.google.com/uc?export=view&id=1KEYWx-lU_CCW7wTCHmo-6pB-vs7ZGW1U "Web End")
-iOs:
-![Alt text](https://drive.google.com/uc?export=view&id=1zLQ3k2OPpjq39eCcLXF8bBbUbybW_nt5 "iOS Load")
-![Alt text](https://drive.google.com/uc?export=view&id=1cYAKQq_Y390PqAh2TBtgD-vIINi2SU9o "iOS Start")
-![Alt text](https://drive.google.com/uc?export=view&id=1PgD27E85I1vg_S8LTqaRczT3Hl-ZMPWt "iOS End")
-
-
+### Web
+![Alt text](/screenshots/web-start.png "Web Start")
+![Alt text](/screenshots/web-end.png "Web End")
+### iOs
+![Alt text](/screenshots/iOS-load.png "iOS Load")
+![Alt text](/screenshots/iOS-start.png "iOS Start")
+![Alt text](/screenshots/iOS-end.png "iOS End")
 
 ## Environment Setup
 
