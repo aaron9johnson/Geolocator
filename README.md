@@ -3,12 +3,12 @@ Find you location and IP address using your phone!!
 
 ## Screenshots
 Web:
-![Alt text](https://drive.google.com/file/d/12LDJ5ZEpscxDFDG1XblXcLDG8BbzcyZ3/view?usp=sharing "Web Start")
-![Alt text](https://drive.google.com/file/d/1KEYWx-lU_CCW7wTCHmo-6pB-vs7ZGW1U/view?usp=sharing "Web End")
+![Alt text](https://drive.google.com/uc?export=view&id=12LDJ5ZEpscxDFDG1XblXcLDG8BbzcyZ3 "Web Start")
+![Alt text](https://drive.google.com/uc?export=view&id=1KEYWx-lU_CCW7wTCHmo-6pB-vs7ZGW1U "Web End")
 iOs:
-![Alt text](https://drive.google.com/file/d/1zLQ3k2OPpjq39eCcLXF8bBbUbybW_nt5/view?usp=sharing "iOS Load")
-![Alt text](https://drive.google.com/file/d/1cYAKQq_Y390PqAh2TBtgD-vIINi2SU9o/view?usp=sharing "iOS Start")
-![Alt text](https://drive.google.com/file/d/1PgD27E85I1vg_S8LTqaRczT3Hl-ZMPWt/view?usp=sharing "iOS End")
+![Alt text](https://drive.google.com/uc?export=view&id=1zLQ3k2OPpjq39eCcLXF8bBbUbybW_nt5 "iOS Load")
+![Alt text](https://drive.google.com/uc?export=view&id=1cYAKQq_Y390PqAh2TBtgD-vIINi2SU9o "iOS Start")
+![Alt text](https://drive.google.com/uc?export=view&id=1PgD27E85I1vg_S8LTqaRczT3Hl-ZMPWt "iOS End")
 
 
 
