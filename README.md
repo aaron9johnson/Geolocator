@@ -1,15 +1,44 @@
 # Geolocator
-Find you location and IP address using your phone!!
+Find you location and IP address using the web or your phone!!
 
 ## Environment Setup
 
 - ```brew install node ``` - make sure it is Node 10 or newer.
 - ```brew install watchman```
+
+iOS:
 - install Xcode is via the Mac App Store (This includes the simulator)
 - install the Xcode Command Line Tools
-- ```sudo gem install cocoapods```
 
-## Project Setup
+## Running Application
+
+### Web
+
+```yarn web:start```
+
+### iOS
+1) Bundle iOs: ```react-native bundle --dev false --entry-file index.js --bundle-output ios/main.jsbundle --platform ios```
+2) Open Geolocator.xcodeproj in Xcode and run.
+
+### Development
+
+To start Metro(JavaScript bundler): ```npx react-native start```
+
+## Screenshots
+
+### Web
+![Alt text](/screenshots/web-start.png "Web Start")
+---
+![Alt text](/screenshots/web-end.png "Web End")
+
+### iOs
+![Alt text](/screenshots/iOS-load.PNG "iOS Load")
+---
+![Alt text](/screenshots/iOS-start.PNG "iOS Start")
+---
+![Alt text](/screenshots/iOS-end.PNG "iOS End")
+
+# Project Setup (https://github.com/ReyHaynes/react-redux-web-native)
 
 ```git clone git@github.com:ReyHaynes/react-redux-web-native.git Geolocator```
 
@@ -35,24 +64,7 @@ iOS "Could not find iPhone 6 simulator":
 2) replace: ```if (version.indexOf('iOS') !== 0 )``` with ```if (!version.includes("iOS" ))```
 3) replace: ```if (simulator.availability !== '(available)')``` with ```if (simulator.isAvailable !== true)```
 
-## Running Application
-
-To start Metro(JavaScript bundler): ```npx react-native start```
-
-Start: ```npx react-native run-ios```
-
-### Web
-
-```yarn web:start```
-
-### iOS
-Bundle iOs: ```react-native bundle --dev false --entry-file index.js --bundle-output ios/main.jsbundle --platform ios```
-
-Run iOS: ```yarn ios:start```
-or
-Open Geolocator.xcodeproj in Xcode and run.
-
-# Starting Point (https://github.com/ReyHaynes/react-redux-web-native)
+## react-redux-web-native README
 
 React + Redux Web Native App
 --------------------

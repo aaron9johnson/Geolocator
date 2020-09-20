@@ -20,7 +20,7 @@ export default class Label extends React.Component {
 
     return (
       <div>
-        <p style={styles.label}>{label}: <span style={styles.text}>{text}</span></p>
+        <p style={styles.label}><strong>{label}</strong>: <span style={styles.text}>{text}</span></p>
       </div>
       
     );
@@ -34,7 +34,7 @@ const styles = {
     fontWeight: '500'
   },
   label: {
-    textAlign: 'center',
+    textAlign: 'left',
     color: 'black',
     padding: 8,
     fontWeight: '500'

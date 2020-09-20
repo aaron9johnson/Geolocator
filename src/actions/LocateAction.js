@@ -12,7 +12,7 @@ export const LocateAction = () => {
     .then(response => response.json())
     .then(response => {
       console.log(response);
-      dispatch(locationFound(LOCATE_SUCCESSFUL, response['ip'], `${response['city']}, ${response['state_prov']}, ${response['country_name']}, ${response['continent_name']}`))
+      dispatch(locationFound(LOCATE_SUCCESSFUL, response['ip'], `${response['city']}, ${response['state_prov']}, ${response['country_name']}, ${response['continent_name']}`, response['country_flag']))
     })
     .catch((error) => {
       dispatch(locationFound(LOCATE_FAILED, null, null))
@@ -31,12 +31,12 @@ EXAMPLE RESPONSE:
 "is_dst":false,"dst_savings":0}}
 */
 
-const locationFound = (payload, ip, location) => {
+const locationFound = (payload, ip, location, flag) => {
   switch (payload) {
     case LOCATE_SUCCESSFUL:
       return {
         type: payload,
-        data: { ip: ip , location: location}
+        data: { ip: ip , location: location, flag: flag}
       }
     default:
       return {
