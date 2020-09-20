@@ -1,22 +1,19 @@
 # Geolocator
-Find your location and IP address using the web or your phone!!
-
-## Quickstart
-```yarn install && yarn web:start```
+Find you location and IP address using the web or your phone!!
 
 ## Environment Setup
+
 - ```brew install node ``` - make sure it is Node 10 or newer.
 - ```brew install watchman```
-- ```brew install yarn```
 
 iOS:
-- install Xcode via the Mac App Store (This includes the simulator)
-- install Xcode Command Line Tools
+- install Xcode is via the Mac App Store (This includes the simulator)
+- install the Xcode Command Line Tools
 
 ## Running Application
 
 ### Web
-```yarn install```
+
 ```yarn web:start```
 
 ### iOS
@@ -24,36 +21,8 @@ iOS:
 2) Open Geolocator.xcodeproj in Xcode and run.
 
 ### Development
+
 To start Metro(JavaScript bundler): ```npx react-native start```
-
-## iOS Troubleshooting:
-Build failed:
-1) Open Xcode.
-2) File > Project Settings > Build System > switch dropdown to Legacy Build System.
-
-Missing config.h file:
-1) Close Xcode.
-2) Open Terminal, go to your project's root folder and do:
-```cd node_modules/react-native/third-party/glog-{X}.{X}.{X}/```
-3) Run the configure script:
-```./configure```
-
-Missing main.jsbundle:
-1) Open XCode
-2) Project in the Navigator -> apps target -> Build Phases -> Copy Bundle Resources -> add main.jsbundle
-
-iOS "Could not find iPhone 6 simulator":
-1) go to: node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js
-2) replace: ```if (version.indexOf('iOS') !== 0 )``` with ```if (!version.includes("iOS" ))```
-3) replace: ```if (simulator.availability !== '(available)')``` with ```if (simulator.isAvailable !== true)```
-
-Unknown argument type ‘attribute’ in method:
-1) go to /node_modules/react-native/React/Base/RCTModuleMethod.mm
-2) search for ```static BOOL RCTParseUnused(const char **input)``` (about line 100)
-3) after this line
- ```return RCTReadString(input, “__attribute__((unused))”) ||```
-add
-```RCTReadString(input, “__attribute__((__unused__))”) ||```
 
 ## Screenshots
 
@@ -72,6 +41,28 @@ add
 # Project Setup (https://github.com/ReyHaynes/react-redux-web-native)
 
 ```git clone git@github.com:ReyHaynes/react-redux-web-native.git Geolocator```
+
+## Issues Encountered:
+
+Build failed:
+1) Open Xcode.
+2) File > Project Settings > Build System > switch dropdown to Legacy Build System.
+
+Missing config.h file:
+1) Close your Xcode.
+2) Open Terminal, go to your project's root folder and do:
+```cd node_modules/react-native/third-party/glog-{X}.{X}.{X}/```
+3) Run the configure script:
+```./configure```
+
+Missing main.jsbundle:
+1) Open XCode
+2) Project in the Navigator -> apps target -> Build Phases -> Copy Bundle Resources -> add main.jsbundle
+
+iOS "Could not find iPhone 6 simulator":
+1) go to: node_modules/react-native/local-cli/runIOS/findMatchingSimulator.js
+2) replace: ```if (version.indexOf('iOS') !== 0 )``` with ```if (!version.includes("iOS" ))```
+3) replace: ```if (simulator.availability !== '(available)')``` with ```if (simulator.isAvailable !== true)```
 
 ## react-redux-web-native README
 
