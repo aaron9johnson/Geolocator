@@ -1,15 +1,8 @@
-// import React from 'react'
-// import { Button, StyleSheet, View } from 'react-native';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 export default class LocateButton extends React.Component {
   static propTypes = {
-    /**
-     * Color of the text (iOS), or background color of the button (Android)
-     */
-    color: PropTypes.string,
     /**
      * If true, disable all interactions for this component.
      */
@@ -25,29 +18,16 @@ export default class LocateButton extends React.Component {
   };
   render() {
     const {
-      color,
       disabled,
       onClick,
       title
     } = this.props;
-    const buttonStyles = [ styles.button ];
-    const textStyles = [ styles.text ];
-
-    if (color) {
-      buttonStyles.push({ backgroundColor: color });
-    }
-
-    if (disabled) {
-      buttonStyles.push(styles.buttonDisabled);
-      textStyles.push(styles.textDisabled);
-    }
-
     return (
       <button
         disabled={disabled}
         onClick={onClick}
-        style={buttonStyles}>
-        <p style={textStyles}>{title}</p>
+        style={styles.button}>
+        <p style={styles.text}>{title}</p>
       </button>
     );
   }
@@ -64,11 +44,5 @@ const styles = {
     color: 'white',
     padding: 8,
     fontWeight: '500'
-  },
-  buttonDisabled: {
-    backgroundColor: '#dfdfdf'
-  },
-  textDisabled: {
-    color: '#a1a1a1'
   }
 };

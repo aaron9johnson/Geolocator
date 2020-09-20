@@ -9,8 +9,8 @@ class GeolocatorScreen extends React.Component {
     super(props, context)
 
     this.state = {
-      ip: 'Hello',
-      location: 'Hello'
+      ip: '',
+      location: ''
     }
 
     this.dispatchLocateAction = this.dispatchLocateAction.bind(this)
@@ -30,7 +30,7 @@ class GeolocatorScreen extends React.Component {
   render() {
     return (
       <div>
-        <LocateButton onClick={this.dispatchLocateAction} title='Click me!' />
+        <LocateButton onClick={this.dispatchLocateAction} title='Find my Location' />
         <Label label={'IP Address'} text={this.state.ip}/>
         <Label label={'Location'} text={this.state.location}/>
       </div>
