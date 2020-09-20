@@ -6,9 +6,9 @@ Find you location and IP address using the web or your phone!!
 ![Alt text](/screenshots/web-start.png "Web Start")
 ![Alt text](/screenshots/web-end.png "Web End")
 ### iOs
-![Alt text](/screenshots/iOS-load.png "iOS Load")
-![Alt text](/screenshots/iOS-start.png "iOS Start")
-![Alt text](/screenshots/iOS-end.png "iOS End")
+![Alt text](/screenshots/iOS-load.PNG "iOS Load")
+![Alt text](/screenshots/iOS-start.PNG "iOS Start")
+![Alt text](/screenshots/iOS-end.PNG "iOS End")
 
 ## Environment Setup
 
